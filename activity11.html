@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            min-height: 40px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FOR LOOP -->
+    <h2>For Loop</h2>
+    Enter number: <input type="number" id="forNum"><br>
+    Enter text: <input type="text" id="forText"><br>
+    <button onclick="showFor()">Show</button>
+    <button onclick="clearFor()">Clear</button>
+
+    <div class="output" id="forOutput"></div>
+
+    <!-- WHILE LOOP -->
+    <h2>While Loop</h2>
+    Enter number: <input type="number" id="whileNum"><br>
+    Enter text: <input type="text" id="whileText"><br>
+    <button onclick="showWhile()">Show</button>
+    <button onclick="clearWhile()">Clear</button>
+
+    <div class="output" id="whileOutput"></div>
+
+    <!-- DO-WHILE LOOP -->
+    <h2>Do-while Loop</h2>
+    Enter number: <input type="number" id="doNum"><br>
+    Enter text: <input type="text" id="doText"><br>
+    <button onclick="showDo()">Show</button>
+    <button onclick="clearDo()">Clear</button>
+
+    <div class="output" id="doOutput"></div>
+
+<script>
+    // FOR LOOP
+    function showFor() {
+        let n = document.getElementById("forNum").value;
+        let text = document.getElementById("forText").value;
+        let result = "";
+
+        for (let i = 0; i < n; i++) {
+            result += text + "<br>";
+        }
+
+        document.getElementById("forOutput").innerHTML = result;
+    }
+
+    function clearFor() {
+        document.getElementById("forOutput").innerHTML = "";
+    }
+
+    // WHILE LOOP
+    function showWhile() {
+        let n = document.getElementById("whileNum").value;
+        let text = document.getElementById("whileText").value;
+        let result = "";
+        let i = 0;
+
+        while (i < n) {
+            result += text + "<br>";
+            i++;
+        }
+
+        document.getElementById("whileOutput").innerHTML = result;
+    }
+
+    function clearWhile() {
+        document.getElementById("whileOutput").innerHTML = "";
+    }
+
+    // DO-WHILE LOOP
+    function showDo() {
+        let n = document.getElementById("doNum").value;
+        let text = document.getElementById("doText").value;
+        let result = "";
+        let i = 0;
+
+        if (n > 0) {
+            do {
+                result += text + "<br>";
+                i++;
+            } while (i < n);
+        }
+
+        document.getElementById("doOutput").innerHTML = result;
+    }
+
+    function clearDo() {
+        document.getElementById("doOutput").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>
