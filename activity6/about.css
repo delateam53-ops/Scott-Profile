@@ -1,0 +1,136 @@
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: #e0f0ff;
+}
+
+.profile-container {
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns: photos + bio */
+    gap: 3rem;
+    align-items: center;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.photo-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 255, 255, 0.4);
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 1.5rem;
+    color: white;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #00ffff;
+    text-shadow: 0 2px 10px rgba(0,255,255,0.6);
+}
+
+.bio {
+    background: rgba(20, 20, 60, 0.75);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid #00aaff44;
+}
+
+.bio h1 {
+    color: #00ffff;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.bio h3 {
+    color: gold;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.bio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bio ul li {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.bio ul li::before {
+    content: "▸";
+    color: #00ffff;
+    position: absolute;
+    left: 0;
+}
+
+.cta {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    background: #00ffff;
+    color: #000;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.5);
+    transition: all 0.3s;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,255,255,0.7);
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+    .photos {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .photo-card {
+        flex: 1 1 45%;
+        max-width: 400px;
+    }
+}

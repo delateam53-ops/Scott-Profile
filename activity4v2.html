@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Activity4</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 450px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 8px 5px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #4e73df;
+    outline: none;
+    box-shadow: 0 0 5px rgba(78,115,223,0.5);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4e73df;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #2e59d9;
+}
+
+button[type="reset"] {
+    background-color: #858796;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #60616f;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="form-container">
+<h1>User Information Form</h1>
+
+<form action="#" method="post">
+<table>
+
+<tr>
+<td>First Name:</td>
+<td><input type="text" name="firstname" required></td>
+</tr>
+
+<tr>
+<td>Last Name:</td>
+<td><input type="text" name="lastname" required></td>
+</tr>
+
+<tr>
+<td>Age:</td>
+<td><input type="number" name="age" required></td>
+</tr>
+
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other
+</td>
+</tr>
+
+<tr>
+<td>Hobbies:</td>
+<td>
+<input type="checkbox" name="hobby" value="reading"> Reading<br>
+<input type="checkbox" name="hobby" value="traveling"> Traveling<br>
+<input type="checkbox" name="hobby" value="gaming"> Gaming<br>
+<input type="checkbox" name="hobby" value="cooking"> Cooking<br>
+<input type="checkbox" name="hobby" value="sports"> Sports
+</td>
+</tr>
+
+<tr>
+<td>Year Level:</td>
+<td>
+<select name="year_level">
+    <option>1st Year</option>
+    <option>2nd Year</option>
+    <option>3rd Year</option>
+    <option>4th Year</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="buttons">
+<button type="submit">Submit</button>
+<button type="reset">Clear</button>
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+
+</body>
+</html>
